@@ -1,0 +1,39 @@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TravelBookingSystem_MI_hw_7.Models.TravelPackage
+<html>
+<body>
+    <h3>Package Details</h3>
+    <hr />
+    <p> Pacakge Id : @Model.packageId</p>
+    <p>Package Name : @Model.packageName</p>
+    <p>Destination : @Model.destination</p>
+    <p>Duration : @Model.duration</p>
+    <p>Price : @Model.price</p>
+    <p>Available Seats : @Model.availableSeats</p>
+    <p>Departure Date : @Model.departureDate</p>
+    <h3> Booking Form</h3>
+    <form action="/Travel/Book" method="post">
+        <div>
+            <label for="customerName">Customer Name:</label>
+            <input type="text" name="customerName" id="customerName" placeholder="Enter Customer Name:" /><br />
+        </div>
+        <div>
+            <label for="customerEmail">Customer Email:</label>
+            <input type="text" name="customerEmail" id="customerEmail" placeholder="Enter Customer Email:" /><br />
+        </div>
+        <div>
+            <label for="NumberOfTravelers">Number Of Travelers:</label>
+            <input type="text" name="NumberOfTravelers" id="NumberOfTravelers" placeholder="Enter Number Of Travelers:" /><br />
+        </div>
+        <div>
+            <label for="packageId">Package Id:</label>
+            <input type="text" name="packageId" id="packageId" placeholder="Enter Package Id:" /><br />
+        </div>
+        <input type="submit" value="Confirm Booking" />
+    </form>
+</body>
+</html>
