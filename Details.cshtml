@@ -1,0 +1,21 @@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<body>
+    <h3>"Package Name:@ViewBag.Package.packageName</h3>
+    <hr />
+    <p>Pacakge Id : @ViewBag.Package.packageId</p>
+    <p>Destination : @ViewBag.Package.destination</p>
+    <p> Duration : @ViewBag.Package.duration</p>
+    <p>Price : @ViewBag.Package.price</p>
+    <p>Available Seats : @ViewBag.Package.availableSeats</p>
+    <p>Departure Date : @ViewBag.Package.departureDate</p>
+    <button>
+        <a href="/Travel/Book/@ViewBag.Package.packageId">Book Now</a>
+    </button>
+
+</body>
+</html>
