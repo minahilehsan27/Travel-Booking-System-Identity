@@ -1,0 +1,42 @@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<TravelBookingSystem_MI_hw_7.Models.TravelPackage>
+
+<html>
+<body>
+    <form action="/Travel/Index" method="get">
+        <table class="table table-striped">
+            <thead>
+            <th>Package Name</th>
+            <th>Destination</th>
+            <th>Duration</th>
+            <th>Price</th>
+            <th>Available Seats</th>
+            <th>Depature Date</th>
+            <th>Details</th>
+            <th>Book Now</th>
+            </thead>
+            <tbody>
+                @foreach (TravelPackage package in Model)
+                {
+                    <tr>
+                        <td>@package.packageName</td>
+                        <td>@package.destination</td>
+                        <td>@package.duration </td>
+                        <td>@package.price </td>
+                        <td>@package.availableSeats </td>
+                        <td>@package.departureDate </td>
+                        <td><a href="/Travel/Details/@package.packageId">Details</a></td>
+                        <td><a href="/Travel/Book/@package.packageId">Book</a></td>
+                    </tr>
+                }
+
+            </tbody>
+    </form>
+    </table>
+</body>
+</html>
+
